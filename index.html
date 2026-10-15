@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Interactive Budgeting Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">SpendWise</div>
+            <p class="subtitle">Dynamic Personal Finance Analytics Hub</p>
+        </header>
+
+        <main>
+            <!-- 4. DYNAMIC DASHBOARD METRICS MAP -->
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h4>Total Budget</h4>
+                    <p id="display-budget">0.00 KES</p>
+                </div>
+                <div class="card">
+                    <h4>Total Spent</h4>
+                    <p id="display-spent">0.00 KES</p>
+                </div>
+                <div class="card status-neutral" id="balance-card">
+                    <h4>Remaining Balance</h4>
+                    <p id="display-balance">0.00 KES</p>
+                    <small id="status-message">Set your allocation parameters to begin</small>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <h3>1. Configuration Settings</h3>
+                <div class="form-group inline-form">
+                    <input type="number" id="budget-input" placeholder="Enter target budget (e.g. 60000)" min="1">
+                    <button id="set-budget-btn">Set Budget</button>
+                </div>
+
+                <hr>
+
+                <h3>2. Add Transaction Log</h3>
+                <div class="form-group">
+                    <label for="expense-name">Item Description</label>
+                    <input type="text" id="expense-name" placeholder="e.g., Internet Utilities">
+                </div>
+                <div class="form-group">
+                    <label for="expense-amount">Amount (KES)</label>
+                    <input type="number" id="expense-amount" placeholder="e.g., 4500" min="1">
+                </div>
+                <button id="add-expense-btn" class="btn-primary">Log Expense Item</button>
+            </div>
+
+            <div class="history-section">
+                <h3>3. Expense Stream History</h3>
+                <ul id="expense-list" class="expense-log-list">
+                  
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 SpendWise App Engine • Dynamic Interactive Model</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
